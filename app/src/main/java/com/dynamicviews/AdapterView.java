@@ -10,11 +10,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class CricketerAdapter extends RecyclerView.Adapter<CricketerAdapter.CricketerView> {
+public class AdapterView extends RecyclerView.Adapter<AdapterView.CricketerView> {
 
-    ArrayList<Cricketer> cricketersList = new ArrayList<>();
+    ArrayList<Customer> cricketersList = new ArrayList<>();
 
-    public CricketerAdapter(ArrayList<Cricketer> cricketersList) {
+    public AdapterView(ArrayList<Customer> cricketersList) {
         this.cricketersList = cricketersList;
     }
 
@@ -30,7 +30,7 @@ public class CricketerAdapter extends RecyclerView.Adapter<CricketerAdapter.Cric
     @Override
     public void onBindViewHolder(@NonNull CricketerView holder, int position) {
 
-        Cricketer cricketer = cricketersList.get(position);
+        Customer cricketer = cricketersList.get(position);
         holder.textCricketerName.setText(cricketer.getCricketerName());
         holder.textTeamName.setText(cricketer.getTeamName());
 

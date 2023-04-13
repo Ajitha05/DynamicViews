@@ -2,16 +2,16 @@ package com.dynamicviews;
 
 import java.io.Serializable;
 
-public class Cricketer implements Serializable {
+public class Customer implements Serializable {
 
     public String cricketerName;
     public String teamName;
 
-    public Cricketer() {
+    public Customer() {
 
     }
 
-    public Cricketer(String cricketerName, String teamName) {
+    public Customer(String cricketerName, String teamName) {
         this.cricketerName = cricketerName;
         this.teamName = teamName;
     }

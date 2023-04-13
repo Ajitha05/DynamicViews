@@ -12,7 +12,7 @@ import java.util.ArrayList;
 public class ActivityCricketers extends AppCompatActivity {
 
     RecyclerView recyclerCricketers;
-    ArrayList<Cricketer> cricketersList = new ArrayList<>();
+    ArrayList<Customer> cricketersList = new ArrayList<>();
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,9 +23,9 @@ public class ActivityCricketers extends AppCompatActivity {
         LinearLayoutManager layoutManager = new LinearLayoutManager(this,RecyclerView.VERTICAL,false);
         recyclerCricketers.setLayoutManager(layoutManager);
 
-        cricketersList = (ArrayList<Cricketer>) getIntent().getExtras().getSerializable("list");
+        cricketersList = (ArrayList<Customer>) getIntent().getExtras().getSerializable("list");
 
-        recyclerCricketers.setAdapter(new CricketerAdapter(cricketersList));
+        recyclerCricketers.setAdapter(new AdapterView(cricketersList));
 
     }
 }

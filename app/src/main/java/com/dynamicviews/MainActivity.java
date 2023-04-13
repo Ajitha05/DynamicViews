@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button buttonSubmitList;
 
     List<String> teamList = new ArrayList<>();
-    ArrayList<Cricketer> cricketersList = new ArrayList<>();
+    ArrayList<Customer> cricketersList = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,10 +37,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         buttonSubmitList.setOnClickListener(this);
 
 
-        teamList.add("Team");
+        teamList.add("Russia");
         teamList.add("India");
         teamList.add("Australia");
         teamList.add("England");
+        teamList.add("manipur");
+        teamList.add("rajasthan");
+        teamList.add("new delhi");
+        teamList.add("punjab");
 
     }
 
@@ -85,7 +89,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             EditText editTextName = (EditText)cricketerView.findViewById(R.id.edit_cricketer_name);
             AppCompatSpinner spinnerTeam = (AppCompatSpinner)cricketerView.findViewById(R.id.spinner_team);
 
-            Cricketer cricketer = new Cricketer();
+            Customer cricketer = new Customer();
 
             if(!editTextName.getText().toString().equals("")){
                 cricketer.setCricketerName(editTextName.getText().toString());
